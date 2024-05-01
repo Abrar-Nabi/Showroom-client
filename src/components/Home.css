@@ -1,0 +1,43 @@
+                                        /* Home section starts */
+.home{
+    padding-top: 5rem;
+    text-align: center;
+    overflow-x: hidden ;
+}
+.heading{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        padding-top: 7rem;
+}
+.homeHeading{
+    font-size: 4vw;
+    text-transform: uppercase;
+    color: #27187E;
+}
+.home img{
+    width: 90%;
+}
+
+@media(max-width:900px){
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding-top: 8rem;
+    }
+    .homeHeading{
+        font-size: 8vw;
+        text-transform: uppercase;
+        color: #27187E;
+    }
+    .heading{
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        padding-top: .1rem;
+}
+    .home img{
+        height: 20rem;
+        width: 100%;
+        padding-top: 8px;
+    }
+}

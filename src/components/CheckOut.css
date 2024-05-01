@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .car {
+    margin-bottom: 20px;
+  }
+  .car img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .car-details {
+    display: flex;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #212529;
+  }
+.left-column,
+.right-column {
+  flex: 1; 
+}
+.left-column{
+  margin-left: 3rem;
+}
+.logo{
+    color: #ffd60a;
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bolder;
+} 
+.logo span{
+    color: #27187E;
+}
+.basicDetails{
+    font-size: 1.3rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    border-top: 1px solid #adb5bd;
+    color: #27187E;
+}
+.basicDetails span{ 
+    color: #ffc300;
+    font-size: .8rem;
+    padding:0 .5rem;
+}
+.car-name{
+  font-size: 2rem;
+  text-align: center;
+  color: #212529;
+}
+.booking-btn{
+  text-align: center;
+}
+
+.end{
+  color: #5c677d;
+  font-size: .9rem;
+  margin-left: 3rem;
+}
+@media(max-width:900px){
+  .container {
+    max-width: 300px;
+  }
+  .logo{
+    font-size: 1.5rem;
+}
+.basicDetails{
+    font-size: .7rem;
+}
+.basicDetails span{ 
+    font-size: .5rem;
+    padding:0 .3rem;
+}
+.car-details {
+    font-size: .6rem;
+    line-height: 1.2rem;
+  }
+  .left-column{
+  margin-left: .1rem;
+}
+.right-column{
+  padding-right: 1rem;
+}
+.end{
+  color: #5c677d;
+  font-size: .5rem;
+  margin-left: 1rem;
+}
+}

@@ -1,0 +1,92 @@
+                                   /* contact section start */
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 0 .5rem 10rem 5rem;
+}
+.contact .row .map{
+    flex: 1 1 20rem;
+    width: 100%; 
+    padding: .5rem;
+    margin-left: 5rem;
+    border: 1px solid #adb5bd;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+}
+.contact .row form{
+    flex: 1 1 1rem;
+    width: 100%; 
+    padding: 4rem;
+    height: 22rem;
+    margin-right: 7rem;
+    border: 1px solid #adb5bd;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    text-align: center; 
+}
+.contact .row form h3{
+    font-size: 2.3rem;
+    color: #212529;
+    position: relative;
+    bottom: 5rem;
+}
+.contact .row form .box{
+    position: relative;
+    bottom: 7rem;
+    margin: .8rem 0;
+    height: .3rem;
+    width: 80%;
+    border: 1px solid #adb5bd;
+    padding: 1.3rem;
+    font-size: 1.2rem;
+    color: #5c677d;
+    text-transform: none;
+    border-radius: .3rem;
+}
+.getInTouchBtn{
+    position: relative;
+    bottom: 6.5rem;
+}
+.contact .row form .textarea{
+    resize: none;
+    height: 3rem;
+}
+
+
+@media(max-width:900px){
+    .contact .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 0 3rem 5rem 3rem; 
+    }
+    
+    .contact .row .map {
+        flex: 1 1 100%; 
+        padding: 1rem;
+        margin: 2rem 0; 
+    }
+    
+    .contact .row form {
+        flex: 1 1 100%; 
+        padding: 2rem;
+        height: 40rem; 
+        margin: 2rem 0; 
+    }
+    
+    .contact .row form h3 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+        margin-top: 5rem;
+    }
+    
+    .contact .row form .box {
+        margin-bottom: 1rem;
+        padding: 2rem;
+        font-size: 2rem; 
+    }
+    .getInTouchBtn{
+     margin-top: 2rem;
+    }
+}
