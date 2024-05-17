@@ -62,7 +62,7 @@ const VehiclesSection = () => {
                 <span className="fas fa-circle"></span>Petrol
                 <span className="fas fa-circle"></span>160Km/h
               </p>
-              <a href="/carsDetail/polo.html" target="_blank" className="btn checkOutBtn">
+              <a href="#"  className="btn checkOutBtn">
                 Check Out
               </a>
             </div>
@@ -100,7 +100,7 @@ const VehiclesSection = () => {
                 <span className="fas fa-circle"></span>Petrol
                 <span className="fas fa-circle"></span>160Km/h
               </p>
-              <a href="/carsDetail/polo.html" target="_blank" className="btn">
+              <a href="#"  className="btn">
                 Check Out
               </a>
             </div>
@@ -119,7 +119,7 @@ const VehiclesSection = () => {
                 <span className="fas fa-circle"></span>Petrol
                 <span className="fas fa-circle"></span>160Km/h
               </p>
-              <a href="/carsDetail/polo.html" target="_blank" className="btn">
+              <a href="#"  className="btn">
                 Check Out
               </a>
             </div>

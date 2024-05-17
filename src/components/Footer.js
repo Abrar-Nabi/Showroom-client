@@ -16,7 +16,7 @@ const Footer = () => {
 
                 <div className="box">
                     <h3>Quick Links</h3>
-                    <a href="#home"><i className="fas fa-home"></i>Home</a>
+                    <a href="#header"><i className="fas fa-home"></i>Home</a>
                     <a href="#vehicles"><i className="fas fa-car"></i>Vehicles</a>
                     <a href="#services"><i className="fas fa-cogs"></i>Services</a>
                     <a href="#featured"><i className="fas fa-star"></i>Featured</a>
@@ -30,7 +30,6 @@ const Footer = () => {
                     <a href="#"><i className="fas fa-phone"></i>+193-654-7710</a>
                     <a href="#"><i className="fas fa-envelope"></i>rideex@gmail.com</a>
                     <a href="#"><i className="fas fa-envelope"></i>Amritsar- 143001</a>
-                    <a href="#"><i class="fa-solid fa-user"></i>Admin</a>
                 </div>
 
                 <div className="box">

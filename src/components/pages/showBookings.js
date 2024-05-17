@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import UserbookingCar from '../cards/UserbookingCar';
-import Navbar from '../Navbar';
+import UserbookingCar from '../cards/UserbookingCard';
 import '../styles/Appointment.css';
 
 const Appointments = () => {
@@ -44,11 +43,11 @@ const Appointments = () => {
 
     return (
         <>
-            <Navbar />
-        <div>
+        <div className='BookingContainer'>
+            <a href="/" className="logo bookingLogo">Ride<span>Exchange</span></a>
 
             <div className="appointments-container">
-                <h1>Bookings</h1>
+                <h1>My Bookings</h1>
                 {filteredAppointments.length === 0 ? (
                     <p>No appointments found</p>
                 ) : (

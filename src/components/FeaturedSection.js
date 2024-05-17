@@ -49,26 +49,26 @@ const FeaturedSection = () => {
                         title="Cruze"
                         stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
                         price="2,75,000"
-                        link="/carsDetail/cruze.html"
+                        // link="/carsDetail/cruze.html"
                     />
                     <FeaturedSectionCard
                         image={car2}
                         title="Cruze"
                         stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
                         price="2,75,000"
-                        link="/carsDetail/cruze.html"
+                        // link="/carsDetail/cruze.html"
                     /><FeaturedSectionCard
                     image={car3}
                     title="Cruze"
                     stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
                     price="2,75,000"
-                    link="/carsDetail/cruze.html"
+                    // link="/carsDetail/cruze.html"
                 /><FeaturedSectionCard
                 image={car4}
                 title="Cruze"
                 stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
                 price="2,75,000"
-                link="/carsDetail/cruze.html"
+                // link="/carsDetail/cruze.html"
             />
                     
                     {/* Add more FeaturedSectionCard components for other featured cars */}

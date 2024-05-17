@@ -11,7 +11,7 @@ const FeaturedSectionCard = ({ image, title, stars, price, link }) => {
                 ))}
             </div>
             <div className="price"> <i class="fa fa-inr"></i>{ price}/-</div>
-            <a href={link} target="_blank" className="btn">Check Out</a>
+            <a href={link}  className="btn">Check Out</a>
         </div>
     );
 };

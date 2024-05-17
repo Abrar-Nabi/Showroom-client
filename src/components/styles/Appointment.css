@@ -1,5 +1,9 @@
 /* /src/components/App */
 /* Appointment card */
+
+.BookingContainer {
+    margin: 30px;
+}
 .appointments-container h1{
 	text-align: center;
 }
@@ -8,30 +12,35 @@
 	padding: 10px;
 	flex-wrap: wrap;
 	justify-content: center;
+	
+	width: 100%;
+
 }
 .appointment-card {
 	border: 1px solid #ddd;
 	border-radius: 8px;
-	width: 300px;
+	display: flex;
 	padding: 16px;
 	margin: 16px 10px;
 	background-color: #fff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.3s ease;
+	
+	width: 100%;
 
 	&:hover {
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	}
 
 	p {
-		font-size: 16px;
-		margin-bottom: 10px;
+		font-size: 11px;
+		margin: 8px;
 	}
 
 	p {
 		span {
 			font-weight: 900;
-		}
+			margin: 0px 5px;		}
 	}
 
 	button {
@@ -52,25 +61,30 @@
 
 
 .appointment-form {
-    max-width: 400px;
+    max-width: 800px;
     width: 80%;
-    padding: 40px;
+    padding: 10px 40px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
 }
 
 .appointment-list {
     display: flex;
-	align-items: start;
+    align-items: start;
+    flex-direction: column;
 }
 
+.bookingsContainer{
+	display: flex	;
+}
 
 .appointment-form h4 {
-	font-size: 24px;
-	/* margin-bottom: 20px; */
+    font-size: 35px;
+    margin: 25px 0px;
+    text-align: center;
+    color: #27187E;
 }
 
 .appointment-form label {
@@ -78,7 +92,7 @@
 	margin-bottom: 8px;
 }
 
-.appointment-form input {
+.appointment-form input, select {
 	width: 100%;
 	padding: 8px;
 	margin-bottom: 16px;
@@ -86,13 +100,7 @@
 	border-radius: 4px;
 }
 
-.appointment-form select{
-	width: 100%;
-	padding: 8px;
-	margin-bottom: 16px;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-  }
+
   
 .appointment-form button {
 	background-color: #007bff;

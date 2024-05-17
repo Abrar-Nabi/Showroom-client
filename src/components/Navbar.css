@@ -1,7 +1,7 @@
 .header {
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 20px 0px;
     background-color: #fff;
     position: fixed;
     width: 100%;
@@ -13,6 +13,7 @@
     font-size: 2rem;
     text-decoration: none;
     font-weight: bolder;
+    margin: 0px 3rem;
 }
 
 .header .logo span {
@@ -48,6 +49,8 @@
 }
 
 .btn:hover {
+    color: #212529;
+
     background-color: #ffc300;
 }
 
@@ -73,7 +76,15 @@
     display: flex;
     list-style: none;
     align-items: center;
+    margin: 10px 35px;
 
+}
+
+.navBar ul span {
+    position: absolute;
+    width: 200px;
+    bottom: 8px;
+    right: -50px;
 }
 
 .navBar {
@@ -98,9 +109,7 @@
     }
 
     .header {
-
         justify-content: space-between;
-
     }
 
     .navBar {
@@ -111,13 +120,13 @@
         display: inline;
     }
 
-    /* .btn{
+     .btn{
         display: inline-block;
         border-radius: .3rem;
         font-size: 2rem;
         padding: .5rem 1rem;
         margin-bottom: 5rem;
-    } */
+    } 
     /* .btn{
         display: none;
     } */
@@ -137,7 +146,7 @@
         flex-direction: column;
         gap: 10px;
         list-style: none;
-
+        font-size: 1.8rem;
     }
 
     .Navbar-mobile ul a {
@@ -147,5 +156,13 @@
     .Navbar-mobile {
         display: flex;
         list-style: none;
+    }
+    .header i{
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+    .header .logo {
+        font-size: 3rem;
+        margin: 0px 9.5rem;
     }
 }

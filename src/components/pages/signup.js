@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/signup.css';
+
 const Signup = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -53,10 +54,10 @@ const Signup = () => {
               />
             </div>
             <button type="submit" className="signup-button">Signup</button>
-            <a href='/Login' className="signup-link">login up</a>
+            <p className="login-text">Already have an account? <a href='/Login' className="login-link">Login</a></p>
           </form>
         </div>
       );
-    };
+};
 
 export default Signup;

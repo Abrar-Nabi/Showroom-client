@@ -49,17 +49,18 @@ const Navbar = () => {
   }
 
   return (
-    <header className="header">
+    <header id='header' className="header">
       {Toggle ? <i class="ri-close-line" onClick={handleToggle}></i> : <i class="ri-menu-line" onClick={handleToggle}></i>}
       <div id="menu-btn" className="fas fa-bars" onClick={toggleMenu}></div>
-      <a href="#home" className="logo">Ride<span>Exchange</span></a>
+      <a href="#header" className="logo">Ride<span>Exchange</span></a>
       <nav className={Toggle ? `Navbar-mobile` : `navBar`}>
         <ul>
 
-          <li><Link to="/">Home</Link></li>
+          {/* <li><a href="#home">Home</a></li> */}
           <li><a href="#vehicles">Vehicles</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#featured">Featured</a></li>
+          <li><a href="#reviews">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
           {loggedIn ? (
             <>
@@ -83,7 +84,7 @@ const Navbar = () => {
                     <i id='btn-user' className="far fa-user"></i> 
             </div> */}
               <li>
-                <Link to="/Login">Login</Link>
+                <Link className="btn" to="/Login">Login</Link>
               </li>
 
             </>

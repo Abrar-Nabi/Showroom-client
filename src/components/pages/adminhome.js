@@ -1,11 +1,13 @@
 import React from "react";
-
+import Sidebar from "../cards/sidebar";
+import Dashboard from "./Dashboard"
+import "../styles/adminhome.css"
 const AdminHome = () => {
   return (
     <div className="admin-home">
-      <h1>Welcome to Admin Dashboard</h1>
-      <p>This is a simple admin home page.</p>
-      <p>You can add more components and functionality here.</p>
+    
+      <Sidebar/>
+      <Dashboard/>
     </div>
   );
 };

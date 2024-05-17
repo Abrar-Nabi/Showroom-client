@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BookingCard from '../cards/BookingCard';
 import '../styles/Appointment.css';
-
+import Sidebar from "../cards/sidebar";
 const Appointments = () => {
     const [appointments, setAppointments] = useState([]);
     const [newAppointment, setNewAppointment] = useState({
@@ -84,6 +84,8 @@ const Appointments = () => {
     };
 
     return (
+        <div className='bookingsContainer'>
+        <Sidebar/>
         <div className="flex-row" style={{ width: '100%' }}>
             <div className="flex-column">
 
@@ -199,9 +201,7 @@ const Appointments = () => {
 
                 ) : <div className="appointments">
                     <h3>
-                        Appointments (
-                        {appointments.length}
-                        )
+                        Appointments 
                     </h3>
                     <div className="appointment-list">
                         {appointments.map((appointment) => (
@@ -217,6 +217,7 @@ const Appointments = () => {
             </div>
 
 
+        </div>
         </div>
     );
 };

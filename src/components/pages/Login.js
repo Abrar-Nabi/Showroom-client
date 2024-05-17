@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/login.css';               
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,7 +20,7 @@ const Login = () => {
       window.localStorage.setItem('userType', userType);
 
       if (userType === 'Admin') {
-        window.location.href = './AdminHome';
+        window.location.href = './adminhome';
         // alert("admin")
       } else if (userType === 'User') {
         window.location.href = '/';
@@ -35,6 +36,8 @@ const Login = () => {
 
   return (
     <div className="login-container">
+        <a href="/" className="logo bookingLogo">Ride<span>Exchange</span></a>
+
       <form className="login-form" onSubmit={handleSubmit}>
         <input 
           type="email" 
@@ -51,7 +54,7 @@ const Login = () => {
           className="login-input" 
         />
         <button type="submit" className="login-button">Login</button>
-        <a href='/Signup' className="signup-link">Sign up</a>
+        <p className="signup-text">Don't have an account? <a href='/Signup' className="signup-link">Sign up</a></p>
       </form>
       {error && <div className="error-message">{error}</div>}
     </div>

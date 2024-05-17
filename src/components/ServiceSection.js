@@ -13,38 +13,38 @@ const ServicesSection = () => {
                     icon="fa-car"
                     title="Car Selling"
                     description="Sell your car hassle-free at our showroom. Top prices, professional service guaranteed. Visit now!"
-                    link="/services/carselling.html"
+                    link="#"
                 />
                 <ServiceSectionCard
                     icon="fa-tools"
                     title="Parts Repairs"
                     description="Expert car parts repair for optimal performance. Quality service, skilled technicians. Visit RideExchange now!"
-                    link="/services/partsrepair.html"
+                    link="#"
                 />
                 <ServiceSectionCard
                     icon="fas fa-car-crash"
                     title="Car Insurance"
                     description="Comprehensive car insurance: Protect your vehicle, drive with confidence. Contact us for details!"
-                    link="/services/partsrepair.html"
+                    link="#"
                 />
                 <ServiceSectionCard
                     icon="fas fa-car-battery"
                     title="Battery Replacement"
                     description="Professional car battery replacement: Stay powered and reliable. Visit Ride Exchange for expert service!"
-                    link="/services/partsrepair.html"
+                    link="#"
                 />
                 <ServiceSectionCard
                     icon="fas fa-gas-pump"
                     title="Oil Change"
                     description="Professional oil change: Improve performance. Visit Ride Exchange for expert service!"
-                    link="/services/partsrepair.html"
+                    link="#"
                 />
                
                <ServiceSectionCard
                     icon="fas fa-headset"
                     title="Customer Supprt"
                     description="24/7 car support: Reliable assistance anytime, anywhere. Contact Ride Exchange for immediate help!"
-                    link="/services/partsrepair.html"
+                    link="#"
                 />
             </div>
         </section>
