@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react';
 import DashboardCard from '../cards/DashboardCard'; // Assuming you have a Card component
 import axios from 'axios';
 
-const Dashboard = ({ totalPatients }) => {
-
-    const [patients, setPatients] = useState([]);
+const Dashboard = () => {
     const [users, setusers] = useState([]);
     const [appointments, setAppointments] = useState([]);
 
@@ -21,7 +19,7 @@ const Dashboard = ({ totalPatients }) => {
 
 
     return (
-        <div className='adminpatients-section'>
+        <div className='admin-section'>
 
 
 
@@ -32,7 +30,7 @@ const Dashboard = ({ totalPatients }) => {
 
             />
             <DashboardCard
-            icon={ <i class="ri-user-6-fill"></i> }
+            icon={ <i class="ri-user-fill"></i> }
                 title={"Total Users"}
                 value={users}
 

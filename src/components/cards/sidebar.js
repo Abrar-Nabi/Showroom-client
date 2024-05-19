@@ -1,8 +1,16 @@
-import React from 'react';
+import {React,useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/Sidebar.css'; // Import the CSS file for styling
 
 function Sidebar() {
+  
+  const [loggedIn, setLoggedIn] = useState(false);
+  const handleLogout = () => {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userEmail");
+    setLoggedIn(false);
+    
+  };
   return (
     <div className="sidebar">
       <div className="sidebar-header">
@@ -28,8 +36,8 @@ function Sidebar() {
         </li>
        
         <li>
-            <NavLink exact to ="/adminhome" activeClassName="active">
-                Dashboard
+            <NavLink onClick={handleLogout} exact to ="/" activeClassName="active">
+                Logout
             </NavLink>
         </li>
        

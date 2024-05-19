@@ -10,7 +10,7 @@ const DashboardCard =
 		}
 	) => {
 		return (
-			<div className="adminpatient-card">
+			<div className="admin-card">
 				<span>{icon}</span>
 				<h4>{title}</h4>
 				<p>{value}</p>

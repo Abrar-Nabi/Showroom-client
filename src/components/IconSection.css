@@ -1,90 +1,3 @@
- /* .icons-container{
-    margin-top: 7rem;
-    padding: 5rem;
-    padding-bottom: 5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1rem;
-    background: #e5e5e5;
-}
-.icons-container .icons{
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 1rem;
-    cursor: pointer;
-}
-.icons-container .icons i{
-    height: 6rem; width: 6rem;
-    line-height: 6rem;
-    font-size: 3rem;
-    border-radius: 50%;
-    background: #ffd60a;
-    color: #212529;
-    text-align: center;
-}
-.icons-container .icons .content h3{
-    color: #212529;
-    font-size: 1.3rem;
-}
-.icons-container .icons .content p{
-    color: #212529;
-    font-size: 1rem;
-}
-.icons-container .icons:hover{
-    background-color: #27187E;
-}
-.icons-container .icons:hover i{
-    background-color: #ffc300;
-}
-.icons-container .icons:hover .content h3{
-    color: #e7ecef;
-}
-.icons-container .icons:hover .content p{
-    color: #e7ecef;
-}
-
-@media(max-width:768px){
-    html{
-        font-size: 60%;
-    }
-    .icons-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        width: 330px; 
-        margin: 0 auto; 
-    }
-    
-    .icons-container .icons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex: 0 0 calc(40% - 1rem);
-        padding: 1.5rem;
-        border-radius: 2rem;
-    }
-    
-    .icons-container .icons i {
-        width: 50%;
-        line-height: 6rem;
-        font-size: 3rem;
-        border-radius: 50%;
-    }
-    
-    .icons-container .icons .content h3 {
-        font-size: 2rem;
-    }
-    
-    .icons-container .icons .content p {
-        font-size: 1.5rem;
-    } 
-}  */
-
-
-
 .icons-container {
     margin-top: 7rem;
     padding: 5rem;
@@ -108,7 +21,6 @@
 .icons-container .icons i {
     height: 6rem;
     width: 6rem;
-
     font-size: 3rem;
     border-radius: 50%;
     background: #ffd60a;
@@ -202,21 +114,20 @@
 
 @media(min-width: 1025px) {
     .icons-container {
-        padding: 5rem;
+        padding: 3.5rem;
         gap: 3rem;
     }
 
     .icons-container .icons {
         flex: 0 0 calc(25% - 1rem);
-        padding: 1.5rem;
         border-radius: 1.5rem;
     }
 
     .icons-container .icons i {
-        height: 6rem;
-        width: 6rem;
-        line-height: 6rem;
-        font-size: 3rem;
+        height: 5rem;
+        width: 5rem;
+        line-height: 4.5rem;
+        font-size: 2.5rem;
     }
 
     .icons-container .icons .content h3 {
@@ -227,6 +138,8 @@
         font-size: 1.3rem;
     }
 }
+
+
 
 
 

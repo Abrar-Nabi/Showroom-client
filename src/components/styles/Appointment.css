@@ -12,20 +12,18 @@
 	padding: 10px;
 	flex-wrap: wrap;
 	justify-content: center;
-	
 	width: 100%;
 
 }
 .appointment-card {
-	border: 1px solid #ddd;
+	border: 2px solid #27187E;
 	border-radius: 8px;
-	display: flex;
+	/* display: flex; */
 	padding: 16px;
 	margin: 16px 10px;
 	background-color: #fff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.3s ease;
-	
 	width: 100%;
 
 	&:hover {
@@ -33,7 +31,7 @@
 	}
 
 	p {
-		font-size: 11px;
+		font-size: 15px;
 		margin: 8px;
 	}
 
@@ -43,22 +41,25 @@
 			margin: 0px 5px;		}
 	}
 
-	button {
-		background-color: #007bff;
-		color: #fff;
-		border: none;
-		padding: 8px 16px;
-		margin-right: 8px;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-
-		&:hover {
-			background-color: #f70c00;
-		}
-	}
+	
 }
 
-
+button {
+	border-radius: .3rem;
+	text-decoration: none;
+	border: none;
+	background-color: #ffd60a;
+	color: #212529;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: .5rem .5rem;
+	margin: 3px;
+	
+	cursor: pointer;
+	&:hover {
+		background-color: #ffc300;
+	}
+}
 
 .appointment-form {
     max-width: 800px;
@@ -73,7 +74,7 @@
 .appointment-list {
     display: flex;
     align-items: start;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .bookingsContainer{
@@ -103,18 +104,23 @@
 
   
 .appointment-form button {
-	background-color: #007bff;
-	color: #fff;
+	display: inline-block;
+	border-radius: .3rem;
+	text-decoration: none;
 	border: none;
-	padding: 10px 20px;
-	border-radius: 4px;
+	width: 100%;
+	background-color: #ffd60a;
+	color: #212529;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding: .5rem 1rem;
+	margin: 5px;
 	cursor: pointer;
-	transition: background-color 0.3s ease;
-
 	&:hover {
-		background-color: #0056b3;
+		background-color: #ffc300;
 	}
 }
+
 
 
 .appointments {
@@ -122,8 +128,6 @@
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
-
-
 }
 
 .add-form {
@@ -142,9 +146,10 @@
 	justify-content: space-evenly !important;
 }
 
-.header{
+/* .header{
 	position: relative;
-}
+} */
+
 @media (max-width: 1024) {
 	.appointment-cards {
        

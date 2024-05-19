@@ -1,4 +1,4 @@
-.adminpatients-section {
+.admin-section {
     display: flex;
     /* margin: 50px; */
     justify-content: start;
@@ -8,13 +8,13 @@
 
 
 
-.adminpatient-card{
+.admin-card{
     width: 250px;
     height: 150px;
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
-	border: 1px solid #ddd;
+	border: 2px solid #27187E;
 	border-radius: 8px;
 	padding: 16px;
 	margin: 10px;
@@ -36,7 +36,7 @@
 		margin: 4px 0;
 	}
 	i {
-		font-size: 25px;
+		font-size: 30px;
 	}
 }
 
@@ -44,7 +44,7 @@
 
 @media (max-width: 344px) {
 	
-.adminpatient-card{
+.admin-card{
 	width: 200px;
 }
 }

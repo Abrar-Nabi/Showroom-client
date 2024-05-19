@@ -46,6 +46,7 @@ const Appointments = () => {
           testDrive: "",
           paymentType: "",
         });
+        window.location.href = "/yourbookings";
       })
       .catch((error) => console.error("Error adding appointment:", error));
   };
@@ -166,92 +167,117 @@ const Appointments = () => {
     }
 >
     <option value="">Select Model</option>
-    <option value="Polo">Polo</option>
+    <option value="Beat">Beat</option>
+    <option value="Bolero">Bolero</option>
     <option value="Fortuner">Fortuner</option>
-    <option value="Thar">Thar</option>
+    <option value="Hiace Van">Hiace Van</option>
+    <option value="Hilux">Hilux</option>
+    <option value="Innova">Innova</option>
+    <option value="LandCruiser">LandCruiser</option>
+    <option value="Polo">Polo</option>
+    <option value="T Prime">T Prime</option>
+    <option value="Swift">Swift</option>
     {/* Add more options as needed */}
 </select>
 
-              <label>Car Variant:</label>
-              <input
-                type="text"
-                value={
-                  isEditMode
-                    ? selectedAppointment.carVariant
-                    : newAppointment.carVariant
-                }
-                onChange={(e) =>
-                  isEditMode
-                    ? setSelectedAppointment({
-                        ...selectedAppointment,
-                        carVariant: e.target.value,
-                      })
-                    : setNewAppointment({
-                        ...newAppointment,
-                        carVariant: e.target.value,
-                      })
-                }
-              />
+              <label>Car Edition:</label>
+              <select
+  value={
+    isEditMode
+      ? selectedAppointment.carVariant
+      : newAppointment.carVariant
+  }
+  onChange={(e) =>
+    isEditMode
+      ? setSelectedAppointment({
+          ...selectedAppointment,
+          carVariant: e.target.value,
+        })
+      : setNewAppointment({
+          ...newAppointment,
+          carVariant: e.target.value,
+        })
+  }
+>
+  <option value="">Select Edition</option>
+  <option value="Standard">Standard</option>
+  <option value="Deluxe">Deluxe</option>
+  <option value="Limited">Limited</option>
+</select>
+
               <label>Car Color:</label>
-              <input
-                type="text"
-                value={
-                  isEditMode
-                    ? selectedAppointment.carColour
-                    : newAppointment.carColour
-                }
-                onChange={(e) =>
-                  isEditMode
-                    ? setSelectedAppointment({
-                        ...selectedAppointment,
-                        carColour: e.target.value,
-                      })
-                    : setNewAppointment({
-                        ...newAppointment,
-                        carColour: e.target.value,
-                      })
-                }
-              />
+              <select
+  value={
+    isEditMode
+      ? selectedAppointment.carColour
+      : newAppointment.carColour
+  }
+  onChange={(e) =>
+    isEditMode
+      ? setSelectedAppointment({
+          ...selectedAppointment,
+          carColour: e.target.value,
+        })
+      : setNewAppointment({
+          ...newAppointment,
+          carColour: e.target.value,
+        })
+  }
+>
+  <option value="">Select Colour</option>
+  <option value="Red">Red</option>
+  <option value="Blue">Blue</option>
+  <option value="White">White</option>
+  <option value="Black">Black</option>
+</select>
               <label>Test Drive:</label>
-              <input
-                type="text"
-                value={
-                  isEditMode
-                    ? selectedAppointment.testDrive
-                    : newAppointment.testDrive
-                }
-                onChange={(e) =>
-                  isEditMode
-                    ? setSelectedAppointment({
-                        ...selectedAppointment,
-                        testDrive: e.target.value,
-                      })
-                    : setNewAppointment({
-                        ...newAppointment,
-                        testDrive: e.target.value,
-                      })
-                }
-              />
+              <select
+  value={
+    isEditMode
+      ? selectedAppointment.testDrive
+      : newAppointment.testDrive
+  }
+  onChange={(e) =>
+    isEditMode
+      ? setSelectedAppointment({
+          ...selectedAppointment,
+          testDrive: e.target.value,
+        })
+      : setNewAppointment({
+          ...newAppointment,
+          testDrive: e.target.value,
+        })
+  }
+>
+  <option value="">Select an option</option>
+  <option value="Yes">Yes</option>
+  <option value="No">No</option>
+</select>
+
               <label>Payment Method:</label>
-              <input
-                type="text"
-                value={
-                  isEditMode
-                    ? selectedAppointment.paymentType
-                    : newAppointment.paymentType
-                }
-                onChange={(e) =>
-                  isEditMode
-                    ? setSelectedAppointment({
-                        ...selectedAppointment,
-                        paymentType: e.target.value,
-                      })
-                    : setNewAppointment({
-                        ...newAppointment,
-                        paymentType: e.target.value,
-                      })
-                }
-              />
+              <select
+  value={
+    isEditMode
+      ? selectedAppointment.paymentType
+      : newAppointment.paymentType
+  }
+  onChange={(e) =>
+    isEditMode
+      ? setSelectedAppointment({
+          ...selectedAppointment,
+          paymentType: e.target.value,
+        })
+      : setNewAppointment({
+          ...newAppointment,
+          paymentType: e.target.value,
+        })
+  }
+>
+  <option value="">Select a payment method</option>
+  <option value="Credit/Debit Card">Credit/Debit Card</option>
+  <option value="EMI">EMI</option>
+  <option value="Full Payment via Cash/Cheque">Full Payment via Cash/Cheque</option>
+</select>
               <button type="submit"> Confirm Booking</button>
             </form>
           </div>

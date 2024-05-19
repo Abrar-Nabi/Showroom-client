@@ -1,6 +1,7 @@
 .vehicles .vehicles-slider{
     padding-bottom: 5rem;
     margin: 0 8rem 0 8rem;
+    
 }
 .vehicles .vehicles-slider .box{
     text-align: center;
@@ -14,11 +15,11 @@
     margin-top: 2px;
 }
 .vehicles .vehicles-slider .box .content h3{
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #212529;
 }
 .vehicles .vehicles-slider .box .content .price{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #ffc300;
     font-weight: bolder;
 }

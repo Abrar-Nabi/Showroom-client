@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
 import FeaturedSectionCard from './FeaturedSectionCard';
 import car1 from "./assets/images/cars/corolla.png";
-import car2 from "./assets/images/cars/fortuner.png";
-import car3 from "./assets/images/cars/hiaceVan.png";
-import car4 from "./assets/images/cars/hilux.png";
+import car2 from "./assets/images/cars/etios.png";
+import car3 from "./assets/images/cars/innova.png";
+import car4 from "./assets/images/cars/polo.png";
+import car5 from "./assets/images/cars/verna.png";
+import car6 from "./assets/images/cars/swift.png";
+import car7 from "./assets/images/cars/kwid.png";
+import car8 from "./assets/images/cars/beat.png";
+
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 
@@ -46,32 +51,53 @@ const FeaturedSection = () => {
                 <div className="swiper-wrapper">
                     <FeaturedSectionCard
                         image={car1}
-                        title="Cruze"
+                        title="Corolla"
                         stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
-                        price="2,75,000"
-                        // link="/carsDetail/cruze.html"
+                        price="4,75,000"
                     />
                     <FeaturedSectionCard
                         image={car2}
                         title="Cruze"
                         stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
-                        price="2,75,000"
-                        // link="/carsDetail/cruze.html"
-                    /><FeaturedSectionCard
+                        price="5,00,000"
+                    />
+                    <FeaturedSectionCard
                     image={car3}
-                    title="Cruze"
+                    title="Innova"
                     stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
-                    price="2,75,000"
-                    // link="/carsDetail/cruze.html"
-                /><FeaturedSectionCard
+                    price="7,15,000"
+                />
+                <FeaturedSectionCard
                 image={car4}
-                title="Cruze"
+                title="Polo"
                 stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
-                price="2,75,000"
-                // link="/carsDetail/cruze.html"
+                price="5,50,000"
             />
+            <FeaturedSectionCard
+                        image={car5}
+                        title="Verna"
+                        stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
+                        price="11,50,000"
+                    />
+                    <FeaturedSectionCard
+                        image={car6}
+                        title="Swift"
+                        stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
+                        price="4,05,000"
+                    />
+                    <FeaturedSectionCard
+                        image={car7}
+                        title="Kwid"
+                        stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
+                        price="3,75,000"
+                    />
+                    <FeaturedSectionCard
+                        image={car8}
+                        title="Beat"
+                        stars={['fa-star', 'fa-star', 'fa-star', 'fa-star', 'fa-star-half-alt']}
+                        price="2,65,000"
+                    />
                     
-                    {/* Add more FeaturedSectionCard components for other featured cars */}
                 </div>
                 <div className="swiper-pagination"></div>
             </div>

@@ -20,7 +20,9 @@ const Signup = () => {
     };
 
     return (
+      
         <div className="signup-container">
+      <a href="/" className="logo bookingLogo signupLogo">Ride<span>Exchange</span></a>    
           <h2>Signup</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">

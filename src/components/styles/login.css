@@ -51,8 +51,9 @@
   display: block;
   text-align: center;
   margin-top: 10px;
-  color: #007bff;
-  font-size: 14px;
+  color: #27187E;
+  font-size: 18px; 
+  text-decoration: none;
 }
 
 /* Error message styles */
@@ -60,7 +61,7 @@
   color: red;
   margin-top: 10px;
   text-align: center;
-  font-size: 14px; 
+  font-size: 20px; 
 }
 
 /* Media query for responsiveness */

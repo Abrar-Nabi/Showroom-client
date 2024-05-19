@@ -7,12 +7,13 @@
 .heading{
         font-size: 3rem;
         margin-bottom: 1rem;
-        padding-top: 4rem;
+        padding-top: 7rem;
 }
 .homeHeading{
     font-size: 4vw;
     text-transform: uppercase;
     color: #27187E;
+    margin-top: 8rem;
 }
 .home img{
     width: 90%;
