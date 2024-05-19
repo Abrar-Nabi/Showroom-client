@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Nav from './Navbar'
-import VehiclesSection from './VehiclesSection';
-import IconsSection  from './IconsSections';
-import ServicesSection from './ServiceSection';
-import FeaturedSection from './FeaturedSection';
-import NewsLetter from './NewsLetter';
-import Reviews from './Reviews';
-import ContactSection from './ContactSection';
+import VehiclesSection from './pages/VehiclesSection';
+import IconsSection  from './pages/IconsSections';
+import ServicesSection from './pages/ServiceSection';
+import FeaturedSection from './pages/FeaturedSection';
+import NewsLetter from './pages/NewsLetter';
+import Reviews from './pages/Reviews';
+import ContactSection from './pages/ContactSection';
 import Footer from './Footer';
-import './Home.css'
+import './styles/Home.css'
 import image from './assets/images/homeCars.png';
 
 

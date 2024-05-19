@@ -1,0 +1,65 @@
+                                        /* Service Section Starts */
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+    margin: 0 7rem 0 7rem;
+}
+.services .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)
+}
+.services .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    color: #212529;
+    background-color: #ffd60a;
+    border-radius: 50%;
+    /* margin-bottom: 1rem; */
+}
+.services .box-container .box h3{
+    color: #212529;
+    font-size: 2rem;
+}
+.services .box-container .box p{
+    color: #495057;
+    font-size: 1.2rem;
+    padding: .1rem 0;
+    line-height: 1.8;
+}
+.services .box-container .box:hover{
+    background-color: #27187E;
+}
+.services .box-container .box:hover h3{
+    color: #fff;
+}
+.services .box-container .box:hover p{
+    color: #eee;
+}
+
+@media(max-width:900px){
+.services .box-container{
+    margin: 0 3rem 0 3rem;
+}
+.services .box-container .box{
+    border-radius: 1rem;
+}
+.services .box-container .box i{
+    height: 8rem;
+    width: 8rem;
+    line-height: 8rem;
+    font-size: 3.5rem;
+}
+.services .box-container .box h3{
+    font-size: 3rem;
+}
+.services .box-container .box p{
+    font-size: 1.5rem;
+    padding: .1rem 0;
+    line-height: 1.8;
+}
+}
