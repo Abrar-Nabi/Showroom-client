@@ -12,7 +12,7 @@ const Appointments = () => {
 
     useEffect(() => {
         // Fetch all appointments from the API
-        axios.get('http://localhost:5000/appointments')
+        axios.get('http://localhost:5000/Bookings')
             .then(response => {
                 const allAppointments = response.data;
                 // setAppointments(allAppointments);

@@ -1,18 +1,31 @@
 import {React,useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/Sidebar.css'; // Import the CSS file for styling
-
+import LoadingSpinner from '../cards/LoadingSpinner'; // Import the LoadingSpinner component
 function Sidebar() {
   
   const [loggedIn, setLoggedIn] = useState(false);
+  const [loading, setLoading] = useState(false); // Add loading state
   const handleLogout = () => {
-    localStorage.removeItem("loggedIn");
-    localStorage.removeItem("userEmail");
-    setLoggedIn(false);
-    
+    setLoading(true); // Set loading to true when logout starts
+
+    // Create a promise that resolves after 3 seconds
+    const delay = new Promise((resolve) => setTimeout(resolve, 1000));
+
+    delay.then(() => {
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("userEmail");
+      localStorage.removeItem("username");
+      localStorage.removeItem("token");
+      localStorage.removeItem("userType");
+      setLoggedIn(false);
+      setLoading(false); // Set loading to false after logout process
+      window.location.href = "/";
+    });
   };
   return (
     <div className="sidebar">
+    {loading && <LoadingSpinner />}
       <div className="sidebar-header">
         Admin Panel
       </div>
@@ -36,9 +49,7 @@ function Sidebar() {
         </li>
        
         <li>
-            <NavLink onClick={handleLogout} exact to ="/" activeClassName="active">
-                Logout
-            </NavLink>
+        <button className="btn" onClick={handleLogout}>Logout</button>
         </li>
        
       </ul>

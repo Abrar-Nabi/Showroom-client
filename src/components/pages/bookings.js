@@ -28,10 +28,10 @@ const Bookings = () => {
     e.preventDefault();
     try {
       if (isEditMode) {
-        await axios.post(`http://localhost:5000/appointments/update/${newAppointment._id}`, newAppointment);
+        await axios.post(`http://localhost:5000/Bookings/update/${newAppointment._id}`, newAppointment);
         // Update the appointment in state if needed
       } else {
-        const response = await axios.post('http://localhost:5000/appointments/add', newAppointment);
+        const response = await axios.post('http://localhost:5000/Bookings/add', newAppointment);
         setAppointments([...appointments, response.data]);
       }
       setNewAppointment({ patientName: '', doctorName: '', date: '', phone: '', email: '', dob: '', diseaseType: '' });

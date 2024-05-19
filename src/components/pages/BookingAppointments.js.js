@@ -21,7 +21,7 @@ const Appointments = () => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:5000/appointments')
+            .get('http://localhost:5000/Bookings')
             .then((response) => setAppointments(response.data))
             .catch((error) => console.error('Error fetching appointments:', error));
     }, []);
@@ -30,7 +30,7 @@ const Appointments = () => {
         e.preventDefault();
 
         axios
-            .post('http://localhost:5000/appointments/add', newAppointment)
+            .post('http://localhost:5000/Bookings/add', newAppointment)
             .then((response) => {
                 console.log(response.data);
                 setAppointments([...appointments, response.data]);
@@ -52,7 +52,7 @@ const Appointments = () => {
     const handleUpdateAppointment = (id, e) => {
         e.preventDefault();
         axios
-            .post(`http://localhost:5000/appointments/update/${id}`, selectedAppointment)
+            .post(`http://localhost:5000/Bookings/update/${id}`, selectedAppointment)
             .then((response) => {
                 console.log(response.data);
                 const updateApp = { ...selectedAppointment, _id: id };
@@ -67,7 +67,7 @@ const Appointments = () => {
 
     const handleDeleteAppointment = (id) => {
         axios
-            .delete(`http://localhost:5000/appointments/delete/${id}`)
+            .delete(`http://localhost:5000/Bookings/delete/${id}`)
             .then((response) => {
                 console.log(response.data);
                 setAppointments(appointments.filter((appointment) => appointment._id !== id));

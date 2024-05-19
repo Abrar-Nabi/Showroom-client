@@ -8,7 +8,7 @@ const Dashboard = () => {
 
     useEffect(
         () => {
-            axios.get('http://localhost:5000/appointments')
+            axios.get('http://localhost:5000/Bookings')
                 .then(response => setAppointments(response.data.length))
                 .catch(error => console.error('Error fetching doctors:', error));
 

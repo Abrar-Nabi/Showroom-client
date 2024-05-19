@@ -22,7 +22,7 @@ const Appointments = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/appointments")
+      .get("http://localhost:5000/Bookings")
       .then((response) => setAppointments(response.data))
       .catch((error) => console.error("Error fetching appointments:", error));
   }, []);
@@ -31,7 +31,7 @@ const Appointments = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/appointments/add", newAppointment)
+      .post("http://localhost:5000/Bookings/add", newAppointment)
       .then((response) => {
         console.log(response.data);
         setAppointments([...appointments, response.data]);
@@ -55,7 +55,7 @@ const Appointments = () => {
     e.preventDefault();
     axios
       .post(
-        `http://localhost:5000/appointments/update/${id}`,
+        `http://localhost:5000/Bookings/update/${id}`,
         selectedAppointment
       )
       .then((response) => {
@@ -74,11 +74,11 @@ const Appointments = () => {
 
   return (
     <div className='BookingContainer'>
-     <a href="/" className="logo bookingLogo">Ride<span>Exchange</span></a>
+      <a href="/" className="logo bookingLogo">Ride<span>Exchange</span></a>
       <div className="" style={{ width: "100%" }}>
         <div className="">
           <div className="add-form">
-           
+
             <form
               className="appointment-form"
               onSubmit={
@@ -87,7 +87,7 @@ const Appointments = () => {
                   : handleAddAppointment
               }
             >
-               <h4>Book your Dream Car</h4>
+              <h4>Book your Dream Car</h4>
               <label>Customer Name:</label>
               <input
                 type="text"
@@ -97,13 +97,13 @@ const Appointments = () => {
                 onChange={(e) =>
                   isEditMode
                     ? setSelectedAppointment({
-                        ...selectedAppointment,
-                        Name: e.target.value,
-                      })
+                      ...selectedAppointment,
+                      Name: e.target.value,
+                    })
                     : setNewAppointment({
-                        ...newAppointment,
-                        Name: e.target.value,
-                      })
+                      ...newAppointment,
+                      Name: e.target.value,
+                    })
                 }
               />
               <label>Booking Date:</label>
@@ -115,13 +115,13 @@ const Appointments = () => {
                 onChange={(e) =>
                   isEditMode
                     ? setSelectedAppointment({
-                        ...selectedAppointment,
-                        date: e.target.value,
-                      })
+                      ...selectedAppointment,
+                      date: e.target.value,
+                    })
                     : setNewAppointment({
-                        ...newAppointment,
-                        date: e.target.value,
-                      })
+                      ...newAppointment,
+                      date: e.target.value,
+                    })
                 }
               />
               <label>phone:</label>
@@ -133,151 +133,151 @@ const Appointments = () => {
                 onChange={(e) =>
                   isEditMode
                     ? setSelectedAppointment({
-                        ...selectedAppointment,
-                        phone: e.target.value,
-                      })
+                      ...selectedAppointment,
+                      phone: e.target.value,
+                    })
                     : setNewAppointment({
-                        ...newAppointment,
-                        phone: e.target.value,
-                      })
+                      ...newAppointment,
+                      phone: e.target.value,
+                    })
                 }
               />
               <label>email:</label>
-              <input type="email"value={isEditMode ? selectedAppointment.email : newAppointment.email
+              <input type="email" value={isEditMode ? selectedAppointment.email : newAppointment.email
+              }
+                onChange={(e) =>
+                  isEditMode
+                    ? setSelectedAppointment({
+                      ...selectedAppointment,
+                      email: e.target.value,
+                    })
+                    : setNewAppointment({
+                      ...newAppointment,
+                      email: e.target.value,
+                    })
+                } disabled={true}
+              />
+              <label>Vehicle Model:</label>
+              <select
+                value={isEditMode ? selectedAppointment.carModel : newAppointment.carModel}
+                onChange={(e) =>
+                  isEditMode
+                    ? setSelectedAppointment({ ...selectedAppointment, carModel: e.target.value })
+                    : setNewAppointment({ ...newAppointment, carModel: e.target.value })
+                }
+              >
+                <option value="">Select Model</option>
+                <option value="Beat">Beat</option>
+                <option value="Bolero">Bolero</option>
+                <option value="Fortuner">Fortuner</option>
+                <option value="Hiace Van">Hiace Van</option>
+                <option value="Hilux">Hilux</option>
+                <option value="Innova">Innova</option>
+                <option value="LandCruiser">LandCruiser</option>
+                <option value="Polo">Polo</option>
+                <option value="T Prime">T Prime</option>
+                <option value="Swift">Swift</option>
+                {/* Add more options as needed */}
+              </select>
+
+              <label>Car Edition:</label>
+              <select
+                value={
+                  isEditMode
+                    ? selectedAppointment.carVariant
+                    : newAppointment.carVariant
                 }
                 onChange={(e) =>
                   isEditMode
                     ? setSelectedAppointment({
-                        ...selectedAppointment,
-                        email: e.target.value,
-                     })
+                      ...selectedAppointment,
+                      carVariant: e.target.value,
+                    })
                     : setNewAppointment({
-                        ...newAppointment,
-                        email: e.target.value,
-                      }) 
-                } disabled={true} 
-              />
-             <label>Vehicle Model:</label>
-<select
-    value={isEditMode ? selectedAppointment.carModel : newAppointment.carModel}
-    onChange={(e) =>
-        isEditMode
-            ? setSelectedAppointment({ ...selectedAppointment, carModel: e.target.value })
-            : setNewAppointment({ ...newAppointment, carModel: e.target.value })
-    }
->
-    <option value="">Select Model</option>
-    <option value="Beat">Beat</option>
-    <option value="Bolero">Bolero</option>
-    <option value="Fortuner">Fortuner</option>
-    <option value="Hiace Van">Hiace Van</option>
-    <option value="Hilux">Hilux</option>
-    <option value="Innova">Innova</option>
-    <option value="LandCruiser">LandCruiser</option>
-    <option value="Polo">Polo</option>
-    <option value="T Prime">T Prime</option>
-    <option value="Swift">Swift</option>
-    {/* Add more options as needed */}
-</select>
-
-              <label>Car Edition:</label>
-              <select
-  value={
-    isEditMode
-      ? selectedAppointment.carVariant
-      : newAppointment.carVariant
-  }
-  onChange={(e) =>
-    isEditMode
-      ? setSelectedAppointment({
-          ...selectedAppointment,
-          carVariant: e.target.value,
-        })
-      : setNewAppointment({
-          ...newAppointment,
-          carVariant: e.target.value,
-        })
-  }
->
-  <option value="">Select Edition</option>
-  <option value="Standard">Standard</option>
-  <option value="Deluxe">Deluxe</option>
-  <option value="Limited">Limited</option>
-</select>
+                      ...newAppointment,
+                      carVariant: e.target.value,
+                    })
+                }
+              >
+                <option value="">Select Edition</option>
+                <option value="Standard">Standard</option>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Limited">Limited</option>
+              </select>
 
               <label>Car Color:</label>
               <select
-  value={
-    isEditMode
-      ? selectedAppointment.carColour
-      : newAppointment.carColour
-  }
-  onChange={(e) =>
-    isEditMode
-      ? setSelectedAppointment({
-          ...selectedAppointment,
-          carColour: e.target.value,
-        })
-      : setNewAppointment({
-          ...newAppointment,
-          carColour: e.target.value,
-        })
-  }
->
-  <option value="">Select Colour</option>
-  <option value="Red">Red</option>
-  <option value="Blue">Blue</option>
-  <option value="White">White</option>
-  <option value="Black">Black</option>
-</select>
+                value={
+                  isEditMode
+                    ? selectedAppointment.carColour
+                    : newAppointment.carColour
+                }
+                onChange={(e) =>
+                  isEditMode
+                    ? setSelectedAppointment({
+                      ...selectedAppointment,
+                      carColour: e.target.value,
+                    })
+                    : setNewAppointment({
+                      ...newAppointment,
+                      carColour: e.target.value,
+                    })
+                }
+              >
+                <option value="">Select Colour</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+              </select>
               <label>Test Drive:</label>
               <select
-  value={
-    isEditMode
-      ? selectedAppointment.testDrive
-      : newAppointment.testDrive
-  }
-  onChange={(e) =>
-    isEditMode
-      ? setSelectedAppointment({
-          ...selectedAppointment,
-          testDrive: e.target.value,
-        })
-      : setNewAppointment({
-          ...newAppointment,
-          testDrive: e.target.value,
-        })
-  }
->
-  <option value="">Select an option</option>
-  <option value="Yes">Yes</option>
-  <option value="No">No</option>
-</select>
+                value={
+                  isEditMode
+                    ? selectedAppointment.testDrive
+                    : newAppointment.testDrive
+                }
+                onChange={(e) =>
+                  isEditMode
+                    ? setSelectedAppointment({
+                      ...selectedAppointment,
+                      testDrive: e.target.value,
+                    })
+                    : setNewAppointment({
+                      ...newAppointment,
+                      testDrive: e.target.value,
+                    })
+                }
+              >
+                <option value="">Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
 
               <label>Payment Method:</label>
               <select
-  value={
-    isEditMode
-      ? selectedAppointment.paymentType
-      : newAppointment.paymentType
-  }
-  onChange={(e) =>
-    isEditMode
-      ? setSelectedAppointment({
-          ...selectedAppointment,
-          paymentType: e.target.value,
-        })
-      : setNewAppointment({
-          ...newAppointment,
-          paymentType: e.target.value,
-        })
-  }
->
-  <option value="">Select a payment method</option>
-  <option value="Credit/Debit Card">Credit/Debit Card</option>
-  <option value="EMI">EMI</option>
-  <option value="Full Payment via Cash/Cheque">Full Payment via Cash/Cheque</option>
-</select>
+                value={
+                  isEditMode
+                    ? selectedAppointment.paymentType
+                    : newAppointment.paymentType
+                }
+                onChange={(e) =>
+                  isEditMode
+                    ? setSelectedAppointment({
+                      ...selectedAppointment,
+                      paymentType: e.target.value,
+                    })
+                    : setNewAppointment({
+                      ...newAppointment,
+                      paymentType: e.target.value,
+                    })
+                }
+              >
+                <option value="">Select a payment method</option>
+                <option value="Credit/Debit Card">Credit/Debit Card</option>
+                <option value="EMI">EMI</option>
+                <option value="Full Payment via Cash/Cheque">Full Payment via Cash/Cheque</option>
+              </select>
               <button type="submit"> Confirm Booking</button>
             </form>
           </div>
